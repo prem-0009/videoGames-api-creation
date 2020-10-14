@@ -4,14 +4,14 @@ const morgan = require('morgan');
 
 console.clear()
 
-const gameRoutes = require('./routes/userRoutes');
+const gameRoutes = require('./routes/gameRoutes');
 
 const port = 3000;
 
 
 app.use(morgan('dev'));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}))//??handle url encode data need to add for post request
+// app.use(express.urlencoded({extended: false}))//??handle url encode data need to add for post request
 
 
 app.use('/api/v1/games', gameRoutes);
